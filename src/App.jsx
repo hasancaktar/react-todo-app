@@ -22,14 +22,14 @@ function App() {
     }, [notes]);
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col min-h-screen">
             <Header ref={headerRef} />
             <div className="flex flex-col items-center justify-center flex-grow">
                 <div className="bg-amber-300 p-4 w-full max-w-xl">
                     <NoteCreate onCreateNote={(newNote) => createNote(notes, setNotes, newNote)} />
                 </div>
                 <hr className="w-96 border-black my-6" />
-                <div className="w-full max-w-xl flex-grow">
+                <div className="w-full max-w-xl flex-grow ">
                     <NoteList
                         notes={notes}
                         removeNote={(id) => removeNote(notes, setNotes, id)}

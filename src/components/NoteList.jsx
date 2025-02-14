@@ -13,7 +13,9 @@ export default function NoteList({ notes, removeNote, updateNote }) {
 
     return (
         <div
-            className="overflow-y-auto h-svh mb-5 "  ref={listRef}
+            className="overflow-y-auto mb-5"
+            style={{ maxHeight: 'calc(100vh - 200px)' }}
+            ref={listRef}
         >
             {sortedNotes.map((note) => (
                 <Note key={note.id} note={note} removeNote={removeNote} updateNote={updateNote} />
